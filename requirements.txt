@@ -10,7 +10,7 @@ joblib
 MarkupSafe
 mkl-fft
 mkl-random
-mkl-service
+mkl-service==2.3.0
 numpy
 scikit-learn
 scipy
