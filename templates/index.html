@@ -1,0 +1,44 @@
+<html>
+<head>
+<title> Billboard Hot 100 Prediction</title>
+</head>
+
+<body bgcolor='black' text='white'>
+<h1>
+<b>
+<i>
+<font size=15>
+Billboard Hit Song Prediction
+</font>
+</i>
+</b>
+</h1>
+<div style="background-color:white">
+<hr>
+<hr></div>
+<h2> Enter the details of the song </h2>
+<h4>
+    <form action="{{url_for('predict')}}" method="post">
+    <p> danceability :<input type='number' step="0.01" name='Danceability' placeholder='Enter values for danceability' required pattern="[0-9]+" required='required' /></p>
+    <p> energy :<input type='number' step="0.01" name='Energy' placeholder='Enter values for  energy' required pattern="[0-9]+" required='required' /></p>
+    <p> key :<input type='number' step="0.01" name='Key' placeholder='Enter values for  key' required pattern="[0-9]+" required='required' /></p>
+    <p> loudness :<input type='number' step="0.01" name='Loudness' placeholder='Enter values for  loudness' required pattern="[0-9]+" required='required' /></p>
+    <p> speechiness :<input type='number' step="0.01" name='Speechiness' placeholder='Enter values for  speechiness' required pattern="[0-9]+" required='required' /></p>
+    <p> acousticness :<input type='number' step="0.01" name='Acousticness' placeholder='Enter values for  acousticness' required pattern="[0-9]+" required='required' /></p>
+    <p> instrumentalness :<input type='number' step="0.01" name='Instrumentalness' placeholder='Enter values for  instrumentalness' required pattern="[0-9]+" required='required' /></p>
+    <p> liveness :<input type='number' name='Liveness' step="0.01" placeholder='Enter values for  liveness' required pattern="[0-9]+" required='required' /></p>
+    <p> valence :<input type='number' name='Valence' step="0.01" placeholder='Enter values for  valence' required pattern="[0-9]+" required='required' /></p>
+    <p> tempo :<input type='number' name='Tempo' step="0.01" placeholder='Enter values for  tempo' required pattern="[0-9]+" required='required' /></p>
+    <p> duration_ms :<input type='number' step="0.01" name='Duration_ms' placeholder='Enter values for  duration_ms' required pattern="[0-9]+" required='required' /></p>
+    <p> mode :<input type='number' name='Mode' step="0.01" placeholder='Enter values for  mode' required pattern="[0-9]+" required='required' /></p>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+</form>
+</h4>
+<h2>
+<b>
+{{ prediction_text }}
+</b>
+</h2>
+</body>
+</html>
